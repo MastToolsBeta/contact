@@ -13,14 +13,14 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             overflow: hidden;
         }
 
         .container {
-            margin: 0 10px;
             text-align: center;
             background: linear-gradient(135deg, #232323, #121212); /* Gradient background */
             padding: 30px;
@@ -74,6 +74,24 @@
                 background: linear-gradient(90deg, transparent, #ff8c00, transparent); /* Change color */
             }
         }
+
+        .beta-link {
+            margin-top: 30px;
+            font-size: 1em;
+            color: #ccc;
+        }
+
+        .beta-link a {
+            color: #00aaff; /* Accent color for beta link */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .beta-link a:hover {
+            color: #0077cc; /* Darker color on hover */
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -85,24 +103,9 @@
         <p>Email: <a href="mailto:masttools.com@gmail.com" class="contact-link">masttools.com@gmail.com</a></p>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var glowLine = document.querySelector(".glow-line");
-            var randomColor1 = getRandomColor();
-            var randomColor2 = getRandomColor();
-
-            glowLine.style.background = `linear-gradient(90deg, transparent, ${randomColor1}, transparent)`;
-
-            function getRandomColor() {
-                var letters = '0123456789ABCDEF';
-                var color = '#';
-                for (var i = 0; i < 6; i++) {
-                    color += letters[Math.floor(Math.random() * 16)];
-                }
-                return color;
-            }
-        });
-    </script>
+    <div class="beta-link">
+        <p><a href="https://beta.masttools.com" target="_blank">beta.masttools.com</a> - Cruelty live in beta testing mode.</p>
+    </div>
 </body>
 
 </html>
